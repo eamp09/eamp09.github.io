@@ -7,19 +7,17 @@
 
 <title>Errol Amparado Portfolio</title>
 
-<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
-<!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
+
 body{
   background-color:#0C1F3E;
   color:white;
   font-family:'Open Sans',sans-serif;
   margin:0;
-  padding:0;
 }
 
 h1,h2{
@@ -35,20 +33,19 @@ a:hover{
   color:white;
 }
 
-/* HEADER */
+/* HERO */
+
 .hero{
   background:#002B55;
   padding:60px 40px;
   display:flex;
-  justify-content:center;      /* center the hero-text horizontally */
-  align-items:center;          /* center vertically */
-  position:relative;           /* allows absolute positioning of hero-photo */
-  flex-wrap:wrap;
+  justify-content:center;
+  align-items:center;
+  position:relative;
 }
 
-.hero-text {
+.hero-text{
   text-align:center;
-  max-width: 800px;            /* optional: limit width for better center alignment */
 }
 
 .hero-text h1{
@@ -60,27 +57,10 @@ a:hover{
 .hero-text p{
   font-size:1.3em;
   font-weight:600;
-  margin-top:10px;
-}
-
-/* Hero photo stays right and vertically centered */
-.hero-photo {
-  position:absolute;
-  top:50%;
-  right:40px;
-  transform:translateY(-50%); /* vertically center the photo */
-}
-
-.hero-photo img{
-  width:180px;
-  height:200px;
-  object-fit:cover;
-  border-radius:8%;           /* circular photo */
-  border:5px solid #31A8FF;
-  box-shadow:0 0 20px rgba(49,168,255,0.5);
 }
 
 /* TABS */
+
 .tab-container{
   display:flex;
   justify-content:center;
@@ -88,10 +68,17 @@ a:hover{
   margin-top:40px;
   flex-wrap:wrap;
 }
-  
-.tab-button{ 
-  background:#002B55; border:none; padding:12px 25px; border-radius:8px; cursor:pointer; font-size:1em; font-weight:600; color:white; transition:0.3s; }
 
+.tab-button{
+  background:#002B55;
+  border:none;
+  padding:12px 25px;
+  border-radius:8px;
+  cursor:pointer;
+  font-size:1em;
+  font-weight:600;
+  color:white;
+  transition:0.3s;
 }
 
 .tab-button.active{
@@ -106,20 +93,61 @@ a:hover{
   padding:20px;
   background:#1E2E4B;
   border-radius:10px;
-  color:#E0E0E0;
 }
 
 .tab-content.active{
   display:block;
 }
 
-/* ABOUT */
-.about-text{
-  max-width:900px;
-  margin:auto;
+/* STORY CARDS */
+
+.story-card{
+  position:relative;
+  overflow:hidden;
+  border-radius:10px;
+  margin-bottom:30px;
+  height:200px;
+  display:flex;
+  align-items:center;
+  padding:40px;
+  background:#002B55;
+}
+
+.story-img{
+  position:absolute;
+  right:0;
+  top:0;
+  height:100%;
+  width:45%;
+  object-fit:cover;
+}
+
+/* gradient fade */
+
+.story-card::before{
+  content:"";
+  position:absolute;
+  right:45%;
+  top:0;
+  height:100%;
+  width:30%;
+  background:linear-gradient(to left, transparent, #002B55);
+  z-index:1;
+}
+
+.story-text{
+  position:relative;
+  z-index:2;
+  max-width:55%;
+}
+
+.story-text h3{
+  color:#31A8FF;
+  margin-top:0;
 }
 
 /* SKILLS */
+
 ul.skills{
   list-style:none;
   padding:0;
@@ -136,19 +164,14 @@ ul.skills li{
   align-items:center;
   gap:10px;
   font-weight:600;
-  transition:0.3s;
 }
 
 ul.skills li:hover{
   transform:translateY(-4px);
-  box-shadow:0 8px 20px rgba(0,0,0,0.3);
-}
-
-ul.skills i{
-  font-size:1.1em;
 }
 
 /* PROJECTS */
+
 .projects-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
@@ -159,12 +182,6 @@ ul.skills i{
   background:#003566;
   border-radius:10px;
   padding:25px;
-  transition:0.3s;
-}
-
-.project-card:hover{
-  transform:translateY(-5px);
-  box-shadow:0 10px 25px rgba(0,0,0,0.4);
 }
 
 .project-card h3{
@@ -173,6 +190,7 @@ ul.skills i{
 }
 
 /* FOOTER */
+
 footer{
   background:#002B55;
   text-align:center;
@@ -182,23 +200,42 @@ footer{
 }
 
 /* MOBILE */
+
 @media(max-width:768px){
-  .hero{
-    flex-direction:column;
-    text-align:center;
-    padding:30px 20px;
-  }
 
-  .hero-photo{
-    position:static;
-    transform:none;
-    margin-top:20px;
-  }
-
-  ul.skills{
-    flex-direction:column;
-  }
+.hero{
+  flex-direction:column;
 }
+
+.hero-photo{
+  position:static;
+  transform:none;
+  margin-top:20px;
+}
+
+.story-card{
+  height:auto;
+  flex-direction:column;
+  padding:25px;
+}
+
+.story-img{
+  position:relative;
+  width:100%;
+  height:200px;
+  margin-top:15px;
+}
+
+.story-card::before{
+  display:none;
+}
+
+.story-text{
+  max-width:100%;
+}
+
+}
+
 </style>
 </head>
 
@@ -206,103 +243,130 @@ footer{
 
 <header class="hero">
 
-  <div class="hero-text">
-    <h1>Errol Amparado</h1>
-    <p>E-Commerce Marketplace Specialist | Data Analytics Enthusiast</p>
-  </div>
-
-  <div class="hero-photo">
-    <img src="https://www.dropbox.com/scl/fi/idy6nf2bh9sm1k81gaqfc/me-img.jpeg?rlkey=ssah160kh5enggzehp2otv6na&raw=1" alt="Errol Amparado">
-  </div>
+<div class="hero-text">
+<h1>Errol Amparado</h1>
+<p>E-Commerce Marketplace Specialist | Data Analytics Enthusiast</p>
+</div>
 
 </header>
 
 <div class="container">
 
-  <div class="tab-container">
-    <button class="tab-button active" data-tab="about">About</button>
-    <button class="tab-button" data-tab="skills">Skills</button>
-    <button class="tab-button" data-tab="projects">Projects</button>
-    <a class="tab-button" href="https://www.linkedin.com/in/errolamparado" target="_blank">
-      <i class="fa-brands fa-linkedin"></i>
-    </a>
-  </div>
+<div class="tab-container">
+<button class="tab-button active" data-tab="about">About</button>
+<button class="tab-button" data-tab="skills">Skills</button>
+<button class="tab-button" data-tab="projects">Projects</button>
 
-  <!-- ABOUT -->
-  <div id="about" class="tab-content active">
-    <div class="about-text">
-     <div class="about-highlight">
+<a class="tab-button" href="https://www.linkedin.com/in/errolamparado" target="_blank">
+<i class="fa-brands fa-linkedin"></i>
+</a>
+</div>
 
-  <div class="about-highlight-text">
-    <p>
-      I am an <strong>experienced E-Commerce Marketplace Specialist</strong> with over seven years of progressive experience managing operations across Amazon, Noon, Carrefour, Talabat, Instashop, Namshi, Trendyol, and other GCC platforms.
-    </p>
-  </div>
+<!-- ABOUT -->
 
-  <div class="about-highlight-photo">
-    <img src="https://www.dropbox.com/scl/fi/idy6nf2bh9sm1k81gaqfc/me-img.jpeg?rlkey=ssah160kh5enggzehp2otv6na&raw=1">
-  </div>
+<div id="about" class="tab-content active">
+
+<div class="story-card">
+<img class="story-img" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
+<div class="story-text">
+<h3>E-Commerce Marketplace Specialist</h3>
+<p>
+Experienced E-Commerce Marketplace Specialist with over seven years managing
+operations across Amazon, Noon, Carrefour, Talabat, Instashop, Namshi and
+Trendyol across GCC marketplaces.
+</p>
+</div>
+</div>
+
+<div class="story-card">
+<img class="story-img" src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
+<div class="story-text">
+<h3>Geekay Distribution FZCO</h3>
+<p>
+Since 2022 managing marketplace operations including product listings,
+campaign optimization, pricing strategy and inventory performance tracking.
+</p>
+</div>
+</div>
+
+<div class="story-card">
+<img class="story-img" src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d">
+<div class="story-text">
+<h3>MUMUSO Inventory Controller</h3>
+<p>
+From 2018-2022 managing warehouse stock coordination, replenishment planning
+and supply flow between warehouse and retail locations.
+</p>
+</div>
+</div>
 
 </div>
-      <p>My career journey began in 2016 as a Billing & Technical Support Representative at Convergys PH, supporting U.S. accounts such as Comcast and Spectrum.</p>
-      <p>From 2018–2022 I worked as an Inventory Controller at MUMUSO General Trading LLC in the UAE, managing stock replenishment and warehouse coordination.</p>
-      <p>Since 2022 I have been an E-Commerce Marketplace Specialist at Geekay Distribution FZCO, managing end-to-end marketplace operations including listings, pricing strategy, campaigns, and inventory management.</p>
-      <p><strong>Education:</strong> B.S. Electronics & Engineering Technology – Technological University of the Philippines</p>
-      <p><strong>Certifications:</strong> Google Data Analytics (Coursera), Advanced Excel (LinkedIn Certified)</p>
-    </div>
-  </div>
 
-  <!-- SKILLS -->
-  <div id="skills" class="tab-content">
-    <ul class="skills">
-      <li><i class="fa-brands fa-amazon"></i> Marketplace Ops</li>
-      <li><i class="fa-solid fa-boxes-stacked"></i> Inventory Analytics</li>
-      <li><i class="fa-solid fa-file-excel"></i> Advanced Excel</li>
-      <li><i class="fa-solid fa-chart-line"></i> Power BI</li>
-      <li><i class="fa-solid fa-database"></i> MySQL</li>
-      <li><i class="fa-brands fa-python"></i> Python</li>
-      <li><i class="fa-solid fa-table"></i> Power Query</li>
-      <li><i class="fa-solid fa-code"></i> Excel VBA</li>
-    </ul>
-  </div>
+<!-- SKILLS -->
 
-  <!-- PROJECTS -->
-  <div id="projects" class="tab-content">
-    <div class="projects-grid">
-      <div class="project-card">
-        <h3>Marketplace Sales Dashboard</h3>
-        <p>Automated dashboards tracking GMV, sell-through rate and stock health using Excel and Power BI.</p>
-      </div>
-      <div class="project-card">
-        <h3>Inventory Forecasting Model</h3>
-        <p>Forecasting model using sales velocity, lead times and reorder thresholds.</p>
-      </div>
-      <div class="project-card">
-        <h3>Product Listing Optimization</h3>
-        <p>Improved marketplace listings across Amazon and Noon to increase visibility and conversions.</p>
-      </div>
-    </div>
-  </div>
+<div id="skills" class="tab-content">
+
+<ul class="skills">
+
+<li><i class="fa-brands fa-amazon"></i> Marketplace Ops</li>
+<li><i class="fa-solid fa-boxes-stacked"></i> Inventory Analytics</li>
+<li><i class="fa-solid fa-file-excel"></i> Advanced Excel</li>
+<li><i class="fa-solid fa-chart-line"></i> Power BI</li>
+<li><i class="fa-solid fa-database"></i> MySQL</li>
+<li><i class="fa-brands fa-python"></i> Python</li>
+<li><i class="fa-solid fa-table"></i> Power Query</li>
+<li><i class="fa-solid fa-code"></i> Excel VBA</li>
+
+</ul>
+
+</div>
+
+<!-- PROJECTS -->
+
+<div id="projects" class="tab-content">
+
+<div class="projects-grid">
+
+<div class="project-card">
+<h3>Marketplace Sales Dashboard</h3>
+<p>Automated dashboards tracking GMV, sell-through rate and stock health using Excel and Power BI.</p>
+</div>
+
+<div class="project-card">
+<h3>Inventory Forecasting Model</h3>
+<p>Forecasting model using sales velocity, lead times and reorder thresholds.</p>
+</div>
+
+<div class="project-card">
+<h3>Product Listing Optimization</h3>
+<p>Improved marketplace listings across Amazon and Noon to increase visibility and conversions.</p>
+</div>
+
+</div>
+
+</div>
 
 </div>
 
 <footer>
-  © 2026 Errol Amparado
+© 2026 Errol Amparado
 </footer>
 
 <script>
+
 const tabs=document.querySelectorAll('.tab-button[data-tab]');
 const contents=document.querySelectorAll('.tab-content');
 
 tabs.forEach(tab=>{
-  tab.addEventListener('click',()=>{
-    tabs.forEach(t=>t.classList.remove('active'));
-    tab.classList.add('active');
-    contents.forEach(c=>c.classList.remove('active'));
-    const target=document.getElementById(tab.dataset.tab);
-    target.classList.add('active');
-  });
+tab.addEventListener('click',()=>{
+tabs.forEach(t=>t.classList.remove('active'));
+tab.classList.add('active');
+
+contents.forEach(c=>c.classList.remove('active'));
+document.getElementById(tab.dataset.tab).classList.add('active');
 });
+});
+
 </script>
 
 </body>

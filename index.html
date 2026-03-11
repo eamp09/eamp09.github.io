@@ -41,7 +41,6 @@ a:hover{
   display:flex;
   justify-content:center;
   align-items:center;
-  position:relative;
 }
 
 .hero-text{
@@ -135,10 +134,28 @@ a:hover{
   z-index:1;
 }
 
+/* TEXT STYLING */
+
 .story-text{
   position:relative;
   z-index:2;
   max-width:55%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding-left:40px;
+  padding-right:40px;
+}
+
+.story-text h3{
+  margin:0;
+  line-height:1.4;
+}
+
+.story-text p{
+  font-style:italic;
+  margin-top:10px;
+  line-height:1.6;
 }
 
 /* ALTERNATE LAYOUT */
@@ -219,12 +236,6 @@ footer{
   flex-direction:column;
 }
 
-.hero-photo{
-  position:static;
-  transform:none;
-  margin-top:20px;
-}
-
 .story-card{
   height:auto;
   flex-direction:column;
@@ -244,6 +255,7 @@ footer{
 
 .story-text{
   max-width:100%;
+  padding:0;
 }
 
 }
@@ -282,9 +294,7 @@ footer{
 <img class="story-img" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
 <div class="story-text">
 <h3>
-Experienced E-Commerce Marketplace Specialist with over seven years managing
-operations across Amazon, Noon, Carrefour, Talabat, Instashop, Namshi and
-Trendyol across GCC marketplaces.
+Experienced E-Commerce Marketplace Specialist with over seven years managing operations across Amazon, Noon, Carrefour, Talabat, Instashop, Namshi and Trendyol across GCC marketplaces.
 </h3>
 </div>
 </div>
@@ -304,7 +314,7 @@ I was handling U.S.-based accounts like Comcast and Spectrum, where I provided e
 <div class="story-text">
 <h3>In 2018, I primarily worked as an Inventory Controller at MUMUSO General Trading LLC, UAE</h3>
 <p>
-However, during the pandemic, I was exposed to the e-commerce world, which sparked my interest and enabled me to learn the fundamentals of e-commerce operations, including platform management, stock replenishment, and market research. This period laid the foundation for my growing passion and expertise in e-commerce.
+However, during the pandemic, I was exposed to the e-commerce world, which sparked my interest and enabled me to learn the fundamentals of e-commerce operations, including platform management, stock replenishment, and market research.
 </p>
 </div>
 </div>
@@ -314,7 +324,7 @@ However, during the pandemic, I was exposed to the e-commerce world, which spark
 <div class="story-text">
 <h3>In 2022, this journey led me to my current role as an E-Commerce Marketplace Specialist at Geekay Distribution FZCO, UAE.</h3>
 <p>
-Here, I have been able to showcase my expertise by focusing primarily on E-commerce Marketplace and Quick-Channels operations. Through continuous study and hands-on experience, I have enhanced my skills, contributed significantly to company success, and pursued personal and professional growth in the ever-evolving e-commerce landscape.
+Here, I have been able to showcase my expertise by focusing primarily on E-commerce Marketplace and Quick-Channels operations.
 </p>
 </div>
 </div>
@@ -322,10 +332,10 @@ Here, I have been able to showcase my expertise by focusing primarily on E-comme
 <div class="story-card">
 <img class="story-img" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
 <div class="story-text">
-<h3>My technical skills include proficiency in Microsoft Office (Advanced Excel), SAP, Magento, and ERP systems, complemented by my educational background in Electronics and Engineering Technology from the Technological University of the Philippines Visayas.</h3>
+<h3>My technical skills include proficiency in Microsoft Office (Advanced Excel), SAP, Magento, and ERP systems.</h3>
 </div>
 </div>
-  
+
 </div>
 
 <!-- SKILLS -->

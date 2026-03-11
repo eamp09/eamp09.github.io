@@ -10,11 +10,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap"
     rel="stylesheet">
 
-  <!-- Font Awesome for icons -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <!-- Font Awesome (fixed version) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
-    /* Global Styles */
     body {
       background-color: #0C1F3E;
       color: #FFFFFF;
@@ -72,11 +71,24 @@
       font-size: 1em;
       font-weight: 600;
       transition: background 0.3s, color 0.3s;
+      color: white;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .tab-button:hover {
+      background-color: #31A8FF;
+      color: #002B55;
     }
 
     .tab-button.active {
       background-color: #31A8FF;
       color: #002B55;
+    }
+
+    .tab-button i {
+      font-size: 1.3em;
     }
 
     .tab-content {
@@ -93,7 +105,7 @@
       display: block;
     }
 
-    .about-grid, .projects-grid {
+    .about-grid {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
@@ -171,21 +183,12 @@
       color: #31A8FF;
     }
 
-    .project-card p {
-      color: #E0E0E0;
-    }
-
     footer {
       background-color: #002B55;
       color: #FFFFFF;
       text-align: center;
       padding: 25px 10px;
       font-size: 0.9em;
-    }
-
-    footer a {
-      color: #FFFFFF;
-      text-decoration: underline;
     }
 
     @media (max-width: 768px) {
@@ -206,93 +209,114 @@
 </head>
 
 <body>
-  <header>
-    <h1>Errol Amparado</h1>
-    <p>E-Commerce Marketplace Specialist | Data Analytics Enthusiast</p>
-  </header>
 
-  <div class="container">
-    <div class="tab-container">
-      <button class="tab-button active" data-tab="about">About</button>
-      <button class="tab-button" data-tab="skills">Skills</button>
-      <button class="tab-button" data-tab="projects">Projects</button>
-<a class="tab-button" href="https://www.linkedin.com/in/errolamparado" target="_blank">
-  <i class="fa-brands fa-linkedin"></i>
-</a>
-    </div>
+<header>
+  <h1>Errol Amparado</h1>
+  <p>E-Commerce Marketplace Specialist | Data Analytics Enthusiast</p>
+</header>
 
-    <!-- About Tab -->
-    <div id="about" class="tab-content active">
-      <div class="about-grid">
-        <div class="about-text">
-          <p>I am an <strong>experienced E-Commerce Marketplace Specialist</strong> with over seven years of progressive experience managing operations across Amazon, Noon, Carrefour, Talabat, Instashop, Namshi, Trendyol, and other GCC platforms. My career journey reflects a continuous evolution from customer support to inventory management, and now to full-scale e-commerce marketplace operations.</p>
-          <p>In 2016, I began as a Billing & Technical Support Representative at Convergys PH, supporting U.S.-based accounts such as Comcast and Spectrum, developing a strong foundation in problem-solving, process management, and customer service excellence.</p>
-          <p>From 2018 to 2022, I worked as an Inventory Controller at MUMUSO General Trading LLC, UAE, overseeing stock ordering, replenishment, and warehouse coordination. During this time, I gained exposure to e-commerce operations, which sparked my passion for platform management, product listings, and market analysis.</p>
-          <p>Since 2022, I have been an E-Commerce Marketplace Specialist at Geekay Distribution FZCO, UAE, managing end-to-end operations, including order processing, inventory accuracy, product listing optimization, pricing strategy, campaign execution, and customer support. This role allows me to combine operational expertise with analytical insights to drive business growth and marketplace success.</p>
-          <p>I am naturally <strong>curious and eager to learn</strong>, constantly seeking new knowledge and skills that enhance both my career and personal growth.</p>
-          <p>Education: B.S. in Electronics and Engineering Technology – Technological University of the Philippines (2012–2016)</p>
-          <p>Certifications: Google Data Analytics (in progress), Advanced Excel (LinkedIn Verified)</p>
-        </div>
-        <div class="about-photo">
-          <img src="https://drive.google.com/uc?export=view&id=1li9uLrlY8B1EElbvgi83qWJ2iTzLL4Cl" alt="Errol Amparado">
-        </div>
+<div class="container">
+
+  <div class="tab-container">
+    <button class="tab-button active" data-tab="about">About</button>
+    <button class="tab-button" data-tab="skills">Skills</button>
+    <button class="tab-button" data-tab="projects">Projects</button>
+
+    <!-- LinkedIn Tab -->
+    <a class="tab-button" href="https://www.linkedin.com/in/errolamparado" target="_blank">
+      <i class="fa-brands fa-linkedin"></i>
+    </a>
+  </div>
+
+  <!-- About -->
+  <div id="about" class="tab-content active">
+    <div class="about-grid">
+
+      <div class="about-text">
+        <p>I am an <strong>experienced E-Commerce Marketplace Specialist</strong> with over seven years of progressive experience managing operations across Amazon, Noon, Carrefour, Talabat, Instashop, Namshi, Trendyol, and other GCC platforms.</p>
+
+        <p>My career journey began in 2016 as a Billing & Technical Support Representative at Convergys PH, supporting U.S. accounts such as Comcast and Spectrum.</p>
+
+        <p>From 2018–2022 I worked as an Inventory Controller at MUMUSO General Trading LLC in the UAE, managing stock replenishment and warehouse coordination.</p>
+
+        <p>Since 2022 I have been an E-Commerce Marketplace Specialist at Geekay Distribution FZCO, managing end-to-end marketplace operations including listings, pricing strategy, campaigns, and inventory management.</p>
+
+        <p><strong>Education:</strong> B.S. Electronics & Engineering Technology – Technological University of the Philippines</p>
+
+        <p><strong>Certifications:</strong> Google Data Analytics (in progress), Advanced Excel</p>
       </div>
-    </div>
 
-    <!-- Skills Tab -->
-    <div id="skills" class="tab-content">
-      <ul class="skills">
-        <li><i class="fa-brands fa-amazon"></i> Marketplace Ops</li>
-        <li><i class="fa-solid fa-boxes-stacked"></i> Inventory Analytics</li>
-        <li><i class="fa-solid fa-file-excel"></i> Advanced Excel</li>
-        <li><i class="fa-solid fa-chart-line"></i> Power BI</li>
-        <li><i class="fa-solid fa-database"></i> MySQL</li>
-        <li><i class="fa-brands fa-python"></i> Python</li>
-        <li><i class="fa-brands fa-amazon"></i> Power Query</li>
-        <li><i class="fa-brands fa-amazon"></i> Advanced Excel (Macro)</li>
-      </ul>
-    </div>
-
-    <!-- Projects Tab -->
-    <div id="projects" class="tab-content">
-      <div class="projects-grid">
-        <div class="project-card">
-          <h3>Marketplace Sales Dashboard</h3>
-          <p>Built automated dashboards tracking GMV, sell-through rate, and stock health using Excel and Power BI.</p>
-        </div>
-        <div class="project-card">
-          <h3>Inventory Forecasting Model</h3>
-          <p>Created forecasting tools using sales velocity, lead times, and reorder thresholds.</p>
-        </div>
-        <div class="project-card">
-          <h3>Product Listing Optimization</h3>
-          <p>Optimized product titles, descriptions, and categories across Amazon and Noon marketplaces.</p>
-        </div>
+      <div class="about-photo">
+        <img src="https://drive.google.com/uc?export=view&id=1li9uLrlY8B1EElbvgi83qWJ2iTzLL4Cl">
       </div>
+
+    </div>
+  </div>
+
+  <!-- Skills -->
+  <div id="skills" class="tab-content">
+
+    <ul class="skills">
+      <li><i class="fa-brands fa-amazon"></i> Marketplace Ops</li>
+      <li><i class="fa-solid fa-boxes-stacked"></i> Inventory Analytics</li>
+      <li><i class="fa-solid fa-file-excel"></i> Advanced Excel</li>
+      <li><i class="fa-solid fa-chart-line"></i> Power BI</li>
+      <li><i class="fa-solid fa-database"></i> MySQL</li>
+      <li><i class="fa-brands fa-python"></i> Python</li>
+      <li><i class="fa-solid fa-table"></i> Power Query</li>
+      <li><i class="fa-solid fa-code"></i> Excel VBA</li>
+    </ul>
+
+  </div>
+
+  <!-- Projects -->
+  <div id="projects" class="tab-content">
+
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <h3>Marketplace Sales Dashboard</h3>
+        <p>Automated dashboards tracking GMV, sell-through rate and stock health using Excel and Power BI.</p>
+      </div>
+
+      <div class="project-card">
+        <h3>Inventory Forecasting Model</h3>
+        <p>Forecasting model using sales velocity, lead times and reorder thresholds.</p>
+      </div>
+
+      <div class="project-card">
+        <h3>Product Listing Optimization</h3>
+        <p>Improved marketplace listings across Amazon and Noon to increase visibility and conversions.</p>
+      </div>
+
     </div>
 
-  <footer>
-    &copy; 2026 Errol Amparado
-  </footer>
+  </div>
 
-  <script>
-    const tabs = document.querySelectorAll('.tab-button');
-    const contents = document.querySelectorAll('.tab-content');
+</div>
 
-    tabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        // Remove active class from all buttons
-        tabs.forEach(t => t.classList.remove('active'));
-        // Add active class to clicked button
-        tab.classList.add('active');
+<footer>
+  © 2026 Errol Amparado
+</footer>
 
-        // Hide all contents
-        contents.forEach(c => c.classList.remove('active'));
-        // Show selected content
-        const target = document.getElementById(tab.dataset.tab);
-        target.classList.add('active');
-      });
-    });
-  </script>
+<script>
+const tabs = document.querySelectorAll('.tab-button[data-tab]');
+const contents = document.querySelectorAll('.tab-content');
+
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+
+    tabs.forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+
+    contents.forEach(c => c.classList.remove('active'));
+
+    const target = document.getElementById(tab.dataset.tab);
+    target.classList.add('active');
+
+  });
+});
+</script>
+
 </body>
 </html>

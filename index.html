@@ -38,16 +38,17 @@ a:hover{
 /* HEADER */
 .hero{
   background:#002B55;
-  padding:60px 60px;
+  padding:60px 40px;
   display:flex;
-  justify-content:center;      /* center name & subtitle */
-  align-items:center;
-  position:relative;           /* for photo positioning */
+  justify-content:center;      /* center the hero-text horizontally */
+  align-items:center;          /* center vertically */
+  position:relative;           /* allows absolute positioning of hero-photo */
   flex-wrap:wrap;
 }
 
 .hero-text {
-  text-align:center;           /* center text horizontally */
+  text-align:center;
+  max-width: 800px;            /* optional: limit width for better center alignment */
 }
 
 .hero-text h1{
@@ -62,18 +63,19 @@ a:hover{
   margin-top:10px;
 }
 
-/* Hero photo top-right */
+/* Hero photo stays right and vertically centered */
 .hero-photo {
   position:absolute;
-  top:20px;
-  right:20px;
+  top:50%;
+  right:40px;
+  transform:translateY(-50%); /* vertically center the photo */
 }
 
 .hero-photo img{
   width:180px;
   height:200px;
   object-fit:cover;
-  border-radius:8%;           /* circular photo */
+  border-radius:50%;           /* circular photo */
   border:5px solid #31A8FF;
   box-shadow:0 0 20px rgba(49,168,255,0.5);
 }
@@ -201,6 +203,7 @@ footer{
 
   .hero-photo{
     position:static;
+    transform:none;
     margin-top:20px;
   }
 

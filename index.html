@@ -249,6 +249,7 @@ footer{
   height:auto;
   flex-direction:column;
   padding:25px;
+  margin-bottom:30px; /* gap between cards */
 }
 
 .story-img{
@@ -265,13 +266,15 @@ footer{
 .story-text{
   position:relative;
   z-index:2;
-  max-width:55%;
+  max-width:100%;      /* use full width on mobile */
   display:flex;
   flex-direction:column;
   justify-content:center;
-  padding-left:40px;  /* space from left edge or photo */
-  padding-right:40px; /* space from right edge or photo */
+  padding-left:20px;   /* small side padding for readability */
+  padding-right:20px;  /* small side padding for readability */
+  margin:0;            /* reset any desktop margin */
 }
+  
 
 /* Adjust for even cards (text on the right) */
 .story-card:nth-child(even) .story-text{

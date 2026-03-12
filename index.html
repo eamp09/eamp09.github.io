@@ -1,24 +1,81 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Errol Amparado Portfolio</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 <style>
 
+/* ===== GLOBAL BACKGROUND UPGRADE ===== /
+
 body{
-  background-color:#0C1F3E;
-  color:white;
-  font-family:'Open Sans',sans-serif;
   margin:0;
+  font-family:'Open Sans',sans-serif;
+  color:white;
+
+  background:linear-gradient(
+    270deg,
+    #0C1F3E,
+    #001a35,
+    #002B55,
+    #0C1F3E
+  );
+
+  background-size:400% 400%;
+  animation:gradientMove 20s ease infinite;
+
+  position:relative;
+  overflow-x:hidden;
 }
+
+/ animated gradient /
+
+@keyframes gradientMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+/ glowing data grid /
+
+body::before{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+
+background-image:
+linear-gradient(#31A8FF22 1px, transparent 1px),
+linear-gradient(90deg,#31A8FF22 1px, transparent 1px);
+
+background-size:70px 70px;
+opacity:0.15;
+
+z-index:-2;
+}
+
+/ floating particles /
+
+body::after{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+
+background-image:
+radial-gradient(circle,#31A8FF55 1px, transparent 1px);
+
+background-size:120px 120px;
+
+animation:particlesMove 60s linear infinite;
+
+z-index:-1;
+}
+
+@keyframes particlesMove{
+from{transform:translateY(0);}
+to{transform:translateY(-200px);}
+}
+
+/ ===== TYPOGRAPHY ===== /
 
 h1,h2{
   font-family:'Montserrat',sans-serif;
@@ -33,7 +90,7 @@ a:hover{
   color:white;
 }
 
-/* HERO */
+/ ===== HERO ===== /
 
 .hero{
   background:#002B55;
@@ -47,10 +104,15 @@ a:hover{
   text-align:center;
 }
 
+/ glowing hero title /
+
 .hero-text h1{
   font-size:60px;
   color:#31A8FF;
   margin:0;
+  text-shadow:
+  0 0 10px #31A8FF55,
+  0 0 20px #31A8FF33;
 }
 
 .hero-text p{
@@ -58,7 +120,7 @@ a:hover{
   font-weight:600;
 }
 
-/* TABS */
+/ ===== TABS ===== /
 
 .tab-container{
   display:flex;
@@ -98,7 +160,7 @@ a:hover{
   display:block;
 }
 
-/* PROFESSIONAL SUMMARY */
+/ ===== PROFESSIONAL SUMMARY ===== /
 
 .about-summary{
 display:flex;
@@ -142,7 +204,7 @@ object-fit:cover;
 border-radius:10px;
 }
 
-/* STORY CARDS */
+/ ===== STORY CARDS ===== /
 
 .story-card{
   position:relative;
@@ -199,7 +261,7 @@ border-radius:10px;
   line-height:1.6;
 }
 
-/* SKILLS */
+/ ===== SKILLS ===== /
 
 ul.skills{
   list-style:none;
@@ -219,7 +281,7 @@ ul.skills li{
   font-weight:600;
 }
 
-/* PROJECTS */
+/ ===== PROJECTS ===== /
 
 .projects-grid{
   display:grid;
@@ -238,7 +300,8 @@ ul.skills li{
   color:#31A8FF;
 }
 
-/* RAW 1 SECTION */
+/ ===== CAREER JOURNEY ===== /
+
 .career-journey{
   background:#003566;
   border-radius:8px;
@@ -246,14 +309,12 @@ ul.skills li{
   margin:30px auto;
   max-width:1000px;
   text-align:center;
-  color:white;
 }
 
 .career-journey h3{
-  font-size: 32px;       /* adjust text size */
-  font-weight: 700;      /* boldness */
-  margin: 20px 0;        /* top & bottom spacing */
-  text-align: center;    /* optional centering */
+  font-size:32px;
+  font-weight:700;
+  margin:20px 0;
 }
 
 .career-journey p{
@@ -262,7 +323,7 @@ ul.skills li{
   font-style:italic;
 }
 
-/* FOOTER */
+/ ===== FOOTER ===== /
 
 footer{
   background:#002B55;
@@ -272,7 +333,7 @@ footer{
   margin-top:40px;
 }
 
-/* MOBILE */
+/ ===== MOBILE ===== */
 
 @media(max-width:768px){
 
@@ -315,158 +376,3 @@ padding:10px;
 }
 
 </style>
-</head>
-
-<body>
-
-<header class="hero">
-
-<div class="hero-text">
-<h1>Errol Amparado</h1>
-<p>E-Commerce Marketplace Specialist | Data Analytics Enthusiast</p>
-</div>
-
-</header>
-
-<div class="container">
-
-<div class="tab-container">
-<button class="tab-button active" data-tab="about">About</button>
-<button class="tab-button" data-tab="skills">Skills</button>
-<button class="tab-button" data-tab="projects">Projects</button>
-
-<a class="tab-button" href="https://www.linkedin.com/in/errolamparado" target="_blank">
-<i class="fa-brands fa-linkedin"></i>
-</a>
-</div>
-
-<!-- ABOUT -->
-
-<div id="about" class="tab-content active">
-
-<!-- PROFESSIONAL SUMMARY -->
-
-<div class="about-summary">
-
-<div class="about-text">
-
-<h2>Professional Summary</h2>
-
-<h4>E-Commerce Marketplace Specialist | Data Analytics Enthusiast</h4>
-
-<p>
-Experienced E-Commerce Marketplace Specialist with over seven years managing operations across Amazon, Noon, Carrefour, Talabat, Instashop, Namshi and Trendyol across GCC marketplaces.
-</p>
-
-<p>
-Specialized in marketplace growth, inventory optimization, sales analytics, and cross-platform operations. Passionate about using data and automation to improve e-commerce performance and decision making.
-</p>
-
-</div>
-
-<div class="about-photo">
-  <img src="https://www.dropbox.com/scl/fi/idy6nf2bh9sm1k81gaqfc/me-img.jpeg?rlkey=ssah160kh5enggzehp2otv6na&st=g5babuw3&raw=1" alt="Errol Amparado">
-</div>
-
-</div>
-
-<!-- Career Journey SECTION -->
-<div class="career-journey">
-<h3>Career Journey</h3>
-</div>
-
-<!-- STORY -->
-
-<div class="story-card">
-<img class="story-img" src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
-<div class="story-text">
-<h3>I began my career in 2016 as a Sales, Billing, and Technical Support Representative for Convergys PH</h3>
-<p>I handled U.S.-based accounts like Comcast and Spectrum providing billing, technical and customer support.</p>
-</div>
-</div>
-
-<div class="story-card">
-<img class="story-img" src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d">
-<div class="story-text">
-<h3>In 2018, I worked as an Inventory Controller at MUMUSO General Trading LLC</h3>
-<p>During the pandemic I was exposed to e-commerce operations including marketplace management, stock replenishment and research.</p>
-</div>
-</div>
-
-<div class="story-card">
-<img class="story-img" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
-<div class="story-text">
-<h3>In 2022 I joined Geekay Distribution FZCO as an E-Commerce Marketplace Specialist</h3>
-<p>I now manage marketplace and quick-commerce operations across multiple GCC platforms.</p>
-</div>
-</div>
-
-</div>
-
-<!-- SKILLS -->
-
-<div id="skills" class="tab-content">
-
-<ul class="skills">
-
-<li><i class="fa-brands fa-amazon"></i> Marketplace Ops</li>
-<li><i class="fa-solid fa-boxes-stacked"></i> Inventory Analytics</li>
-<li><i class="fa-solid fa-file-excel"></i> Advanced Excel</li>
-<li><i class="fa-solid fa-chart-line"></i> Power BI</li>
-<li><i class="fa-solid fa-database"></i> MySQL</li>
-<li><i class="fa-brands fa-python"></i> Python</li>
-<li><i class="fa-solid fa-table"></i> Power Query</li>
-<li><i class="fa-solid fa-code"></i> Excel VBA</li>
-
-</ul>
-
-</div>
-
-<!-- PROJECTS -->
-
-<div id="projects" class="tab-content">
-
-<div class="projects-grid">
-
-<div class="project-card">
-<h3>Marketplace Sales Dashboard</h3>
-<p>Automated dashboards tracking GMV, sell-through rate and stock health using Excel and Power BI.</p>
-</div>
-
-<div class="project-card">
-<h3>Inventory Forecasting Model</h3>
-<p>Forecasting model using sales velocity, lead times and reorder thresholds.</p>
-</div>
-
-<div class="project-card">
-<h3>Product Listing Optimization</h3>
-<p>Improved marketplace listings across Amazon and Noon to increase visibility and conversions.</p>
-</div>
-
-</div>
-
-</div>
-
-<footer>
-© 2026 Errol Amparado
-</footer>
-
-<script>
-
-const tabs=document.querySelectorAll('.tab-button[data-tab]');
-const contents=document.querySelectorAll('.tab-content');
-
-tabs.forEach(tab=>{
-tab.addEventListener('click',()=>{
-tabs.forEach(t=>t.classList.remove('active'));
-tab.classList.add('active');
-
-contents.forEach(c=>c.classList.remove('active'));
-document.getElementById(tab.dataset.tab).classList.add('active');
-});
-});
-
-</script>
-
-</body>
-</html>

@@ -155,7 +155,7 @@ border-radius:10px;
   background:#002B55;
 }
 
-/* TEXT LEFT SIDE */
+                /* TEXT LEFT SIDE */
 .story-text{
   width:30%;
   padding:30px;
@@ -174,7 +174,7 @@ border-radius:10px;
   line-height:1.6;
 }
 
-/* IMAGE RIGHT SIDE */
+                /* IMAGE RIGHT SIDE */
 .story-img{
   position:absolute;
   right:0;
@@ -182,6 +182,17 @@ border-radius:10px;
   height:100%;
   width:100%;
   object-fit:cover;
+}
+                /* REVERSED CARD (TEXT RIGHT / IMAGE LEFT) */
+
+.story-card.reverse .story-text{
+  margin-left:auto;
+  text-align:right;
+}
+
+.story-card.reverse .story-img{
+  left:0;
+  right:auto;
 }
   
 /* SKILLS */
@@ -388,6 +399,7 @@ Specialized in marketplace growth, inventory optimization, sales analytics, and 
 </div>
 </div>
 
+<div class="story-card reverse">
 <div class="story-card">
 <img class="story-img" src="https://www.dropbox.com/scl/fi/bp8yvgvmonb643n87af3a/inventory-img.jpeg?rlkey=m5ryhvfmduog47hs9253mrw60&st=13655el2&raw=1">
 <div class="story-text">

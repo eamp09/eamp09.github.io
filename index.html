@@ -117,12 +117,6 @@ color:#31A8FF;
 margin-top:0;
 }
 
-.about-text h4{
-margin-top:5px;
-font-weight:600;
-opacity:0.9;
-}
-
 .about-text p{
 line-height:1.7;
 margin-top:15px;
@@ -155,7 +149,8 @@ border-radius:10px;
   background:#002B55;
 }
 
-                /* TEXT LEFT SIDE */
+/* TEXT LEFT SIDE */
+
 .story-text{
   width:30%;
   padding:30px;
@@ -174,7 +169,8 @@ border-radius:10px;
   line-height:1.6;
 }
 
-                /* IMAGE RIGHT SIDE */
+/* IMAGE */
+
 .story-img{
   position:absolute;
   right:0;
@@ -183,7 +179,8 @@ border-radius:10px;
   width:100%;
   object-fit:cover;
 }
-                /* REVERSED CARD (TEXT RIGHT / IMAGE LEFT) */
+
+/* REVERSE CARD (TEXT RIGHT / IMAGE LEFT) */
 
 .story-card.reverse .story-text{
   margin-left:auto;
@@ -194,7 +191,7 @@ border-radius:10px;
   left:0;
   right:auto;
 }
-  
+
 /* SKILLS */
 
 ul.skills{
@@ -234,7 +231,8 @@ ul.skills li{
   color:#31A8FF;
 }
 
-/* RAW 1 SECTION */
+/* CAREER SECTION */
+
 .career-journey{
   background:#003566;
   border-radius:8px;
@@ -246,16 +244,9 @@ ul.skills li{
 }
 
 .career-journey h3{
-  font-size: 32px;       /* adjust text size */
-  font-weight: 700;      /* boldness */
-  margin: 20px 0;        /* top & bottom spacing */
-  text-align: center;    /* optional centering */
-}
-
-.career-journey p{
-  margin:0;
-  line-height:1.6;
-  font-style:italic;
+  font-size:32px;
+  font-weight:700;
+  margin:20px 0;
 }
 
 /* FOOTER */
@@ -270,63 +261,23 @@ footer{
 
 /* MOBILE */
 
-@media (max-width: 768px) {
+@media (max-width:768px){
 
-  /* Stack professional summary items vertically */
-  .about-summary {
-    flex-direction: column;
-    align-items: center; /* center items */
-    text-align: center;
-  }
+.story-card{
+flex-direction:column;
+height:auto;
+}
 
-  /* Photo appears first */
-  .about-photo {
-    order: 1; /* first */
-    margin-bottom: 20px; /* spacing below photo */
-  }
+.story-img{
+width:100%;
+height:200px;
+margin-top:15px;
+}
 
-  .about-photo img {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%; /* optional circular photo */
-  }
-
-  /* Professional summary text appears second */
-  .about-text {
-    order: 2; /* second */
-  }
-
-  /* Career journey heading appears third */
-  .career-journey {
-    order: 3; /* third */
-    padding: 10px;
-    text-align: center;
-  }
-
-  /* Story cards stacked vertically */
-  .story-card {
-    flex-direction: column;
-    height: auto;
-    margin-bottom: 20px;
-  }
-
-  .story-img {
-    width: 100%;
-    height: 200px;
-    margin-top: 15px;
-    object-fit: cover;
-  }
-
-  .story-card::before {
-    display: none;
-  }
-
-  .story-text {
-    max-width: 100%;
-    text-align: center;
-    padding: 10px;
-  }
-
+.story-text{
+max-width:100%;
+text-align:center;
+}
 
 }
 
@@ -356,11 +307,7 @@ footer{
 </a>
 </div>
 
-<!-- ABOUT -->
-
 <div id="about" class="tab-content active">
-
-<!-- PROFESSIONAL SUMMARY -->
 
 <div class="about-summary">
 
@@ -373,43 +320,45 @@ Experienced E-Commerce Marketplace Specialist with over seven years managing ope
 </p>
 
 <p>
-Specialized in marketplace growth, inventory optimization, sales analytics, and cross-platform operations. Passionate about using data and automation to improve e-commerce performance and decision making.
+Specialized in marketplace growth, inventory optimization, sales analytics, and cross-platform operations.
 </p>
 
 </div>
 
 <div class="about-photo">
-  <img src="https://www.dropbox.com/scl/fi/idy6nf2bh9sm1k81gaqfc/me-img.jpeg?rlkey=ssah160kh5enggzehp2otv6na&st=g5babuw3&raw=1" alt="Errol Amparado">
+<img src="https://www.dropbox.com/scl/fi/idy6nf2bh9sm1k81gaqfc/me-img.jpeg?rlkey=ssah160kh5enggzehp2otv6na&raw=1">
 </div>
 
 </div>
 
-<!-- Career Journey SECTION -->
 <div class="career-journey">
 <h3>Career Journey</h3>
 </div>
 
-<!-- STORY -->
+<!-- CARD 1 -->
 
 <div class="story-card">
-<img class="story-img" src="https://www.dropbox.com/scl/fi/hhsuyifsoe6wtix7pqgcx/Tech-supp-img.jpeg?rlkey=i1md0bqxw2vb1cp24f5xukf1n&st=ap23jwtm&raw=1">
+<img class="story-img" src="https://www.dropbox.com/scl/fi/hhsuyifsoe6wtix7pqgcx/Tech-supp-img.jpeg?rlkey=i1md0bqxw2vb1cp24f5xukf1n&raw=1">
 <div class="story-text">
 <h3>I began my career in 2016 as a Sales, Billing, and Technical Support Representative for Convergys PH</h3>
 <p>I handled U.S.-based accounts like Comcast and Spectrum providing billing, technical and customer support.</p>
 </div>
 </div>
 
+<!-- CARD 2 REVERSED -->
+
 <div class="story-card reverse">
-<div class="story-card">
-<img class="story-img" src="https://www.dropbox.com/scl/fi/bp8yvgvmonb643n87af3a/inventory-img.jpeg?rlkey=m5ryhvfmduog47hs9253mrw60&st=13655el2&raw=1">
+<img class="story-img" src="https://www.dropbox.com/scl/fi/bp8yvgvmonb643n87af3a/inventory-img.jpeg?rlkey=m5ryhvfmduog47hs9253mrw60&raw=1">
 <div class="story-text">
 <h3>In 2018, I worked as an Inventory Controller at MUMUSO General Trading LLC</h3>
 <p>During the pandemic I was exposed to e-commerce operations including marketplace management, stock replenishment and research.</p>
 </div>
 </div>
 
+<!-- CARD 3 -->
+
 <div class="story-card">
-<img class="story-img" src="https://www.dropbox.com/scl/fi/0ts55sxa8po7i93hiak4y/Ecom-img.jpeg?rlkey=vfg1kvhw7mfoe0scnh29yq7bj&st=8rl8vtw8&raw=1">
+<img class="story-img" src="https://www.dropbox.com/scl/fi/0ts55sxa8po7i93hiak4y/Ecom-img.jpeg?rlkey=vfg1kvhw7mfoe0scnh29yq7bj&raw=1">
 <div class="story-text">
 <h3>In 2022 I joined Geekay Distribution FZCO as an E-Commerce Marketplace Specialist</h3>
 <p>I now manage marketplace and quick-commerce operations across multiple GCC platforms.</p>
@@ -418,70 +367,9 @@ Specialized in marketplace growth, inventory optimization, sales analytics, and 
 
 </div>
 
-<!-- SKILLS -->
-
-<div id="skills" class="tab-content">
-
-<ul class="skills">
-
-<li><i class="fa-brands fa-amazon"></i> Marketplace Ops</li>
-<li><i class="fa-solid fa-boxes-stacked"></i> Inventory Analytics</li>
-<li><i class="fa-solid fa-file-excel"></i> Advanced Excel</li>
-<li><i class="fa-solid fa-chart-line"></i> Power BI</li>
-<li><i class="fa-solid fa-database"></i> MySQL</li>
-<li><i class="fa-brands fa-python"></i> Python</li>
-<li><i class="fa-solid fa-table"></i> Power Query</li>
-<li><i class="fa-solid fa-code"></i> Excel VBA</li>
-
-</ul>
-
-</div>
-
-<!-- PROJECTS -->
-
-<div id="projects" class="tab-content">
-
-<div class="projects-grid">
-
-<div class="project-card">
-<h3>Marketplace Sales Dashboard</h3>
-<p>Automated dashboards tracking GMV, sell-through rate and stock health using Excel and Power BI.</p>
-</div>
-
-<div class="project-card">
-<h3>Inventory Forecasting Model</h3>
-<p>Forecasting model using sales velocity, lead times and reorder thresholds.</p>
-</div>
-
-<div class="project-card">
-<h3>Product Listing Optimization</h3>
-<p>Improved marketplace listings across Amazon and Noon to increase visibility and conversions.</p>
-</div>
-
-</div>
-
-</div>
-
 <footer>
 © 2026 Errol Amparado
 </footer>
-
-<script>
-
-const tabs=document.querySelectorAll('.tab-button[data-tab]');
-const contents=document.querySelectorAll('.tab-content');
-
-tabs.forEach(tab=>{
-tab.addEventListener('click',()=>{
-tabs.forEach(t=>t.classList.remove('active'));
-tab.classList.add('active');
-
-contents.forEach(c=>c.classList.remove('active'));
-document.getElementById(tab.dataset.tab).classList.add('active');
-});
-});
-
-</script>
 
 </body>
 </html>

@@ -14,88 +14,88 @@
 <style>
 
 body{
-  background-color:#0C1F3E;
-  color:white;
-  font-family:'Open Sans',sans-serif;
-  margin:0;
+background-color:#0C1F3E;
+color:white;
+font-family:'Open Sans',sans-serif;
+margin:0;
 }
 
 h1,h2{
-  font-family:'Montserrat',sans-serif;
+font-family:'Montserrat',sans-serif;
 }
 
 a{
-  color:#31A8FF;
-  text-decoration:none;
+color:#31A8FF;
+text-decoration:none;
 }
 
 a:hover{
-  color:white;
+color:white;
 }
 
 /* HERO */
 
 .hero{
-  background:#002B55;
-  padding:60px 40px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
+background:#002B55;
+padding:60px 40px;
+display:flex;
+justify-content:center;
+align-items:center;
 }
 
 .hero-text{
-  text-align:center;
+text-align:center;
 }
 
 .hero-text h1{
-  font-size:60px;
-  color:#31A8FF;
-  margin:0;
+font-size:60px;
+color:#31A8FF;
+margin:0;
 }
 
 .hero-text p{
-  font-size:1.3em;
-  font-weight:600;
+font-size:1.3em;
+font-weight:600;
 }
 
 /* TABS */
 
 .tab-container{
-  display:flex;
-  justify-content:center;
-  gap:15px;
-  margin-top:40px;
-  flex-wrap:wrap;
+display:flex;
+justify-content:center;
+gap:15px;
+margin-top:40px;
+flex-wrap:wrap;
 }
 
 .tab-button{
-  background:#002B55;
-  border:none;
-  padding:12px 25px;
-  border-radius:8px;
-  cursor:pointer;
-  font-size:1em;
-  font-weight:600;
-  color:white;
-  transition:0.3s;
+background:#002B55;
+border:none;
+padding:12px 25px;
+border-radius:8px;
+cursor:pointer;
+font-size:1em;
+font-weight:600;
+color:white;
+transition:0.3s;
 }
 
 .tab-button.active{
-  background:#31A8FF;
-  color:#002B55;
+background:#31A8FF;
+color:#002B55;
 }
 
 .tab-content{
-  display:none;
-  max-width:1000px;
-  margin:30px auto;
-  padding:20px;
-  background:#1E2E4B;
-  border-radius:10px;
+display:none;
+max-width:1000px;
+margin:30px auto;
+padding:20px;
+background:#1E2E4B;
+border-radius:10px;
 }
 
 .tab-content.active{
-  display:block;
+display:block;
 }
 
 /* PROFESSIONAL SUMMARY */
@@ -139,124 +139,149 @@ border-radius:10px;
 /* STORY CARDS */
 
 .story-card{
-  position:relative;
-  overflow:hidden;
-  border-radius:10px;
-  margin-bottom:30px;
-  height:220px;
-  display:flex;
-  align-items:center;
-  background:#002B55;
+position:relative;
+overflow:hidden;
+border-radius:10px;
+margin-bottom:30px;
+height:auto;
+display:flex;
+align-items:center;
+background:#002B55;
+padding:20px;
 }
 
-/* TEXT LEFT SIDE */
-
 .story-text{
-  width:30%;
-  padding:30px;
-  z-index:2;
+width:30%;
+z-index:2;
 }
 
 .story-text h3{
-  margin:0;
-  line-height:1.4;
-  font-size:16px;
+margin:0;
+line-height:1.4;
+font-size:16px;
 }
 
 .story-text p{
-  font-style:italic;
-  margin-top:12px;
-  line-height:1.6;
+font-style:italic;
+margin-top:12px;
+line-height:1.6;
+}
+
+/* expandable text */
+
+.story-more{
+display:none;
+margin-top:10px;
+font-size:14px;
+line-height:1.6;
+opacity:0.9;
+}
+
+/* see more button */
+
+.see-more{
+margin-top:10px;
+padding:6px 12px;
+border:none;
+background:#31A8FF;
+color:#002B55;
+font-size:12px;
+font-weight:600;
+border-radius:5px;
+cursor:pointer;
+}
+
+.see-more:hover{
+background:white;
 }
 
 /* IMAGE */
 
 .story-img{
-  position:absolute;
-  right:0;
-  top:0;
-  height:100%;
-  width:100%;
-  object-fit:cover;
+position:absolute;
+right:0;
+top:0;
+height:100%;
+width:100%;
+object-fit:cover;
 }
 
-/* REVERSE CARD (TEXT RIGHT / IMAGE LEFT) */
+/* REVERSED CARD */
 
 .story-card.reverse .story-text{
-  margin-left:auto;
-  text-align:right;
+margin-left:auto;
+text-align:right;
 }
 
 .story-card.reverse .story-img{
-  left:0;
-  right:auto;
+left:0;
+right:auto;
 }
 
 /* SKILLS */
 
 ul.skills{
-  list-style:none;
-  padding:0;
-  display:flex;
-  flex-wrap:wrap;
-  gap:15px;
+list-style:none;
+padding:0;
+display:flex;
+flex-wrap:wrap;
+gap:15px;
 }
 
 ul.skills li{
-  background:#002B55;
-  padding:12px 18px;
-  border-radius:8px;
-  display:flex;
-  align-items:center;
-  gap:10px;
-  font-weight:600;
+background:#002B55;
+padding:12px 18px;
+border-radius:8px;
+display:flex;
+align-items:center;
+gap:10px;
+font-weight:600;
 }
 
 /* PROJECTS */
 
 .projects-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:20px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
 }
 
 .project-card{
-  background:#003566;
-  border-radius:10px;
-  padding:25px;
+background:#003566;
+border-radius:10px;
+padding:25px;
 }
 
 .project-card h3{
-  margin-top:0;
-  color:#31A8FF;
+margin-top:0;
+color:#31A8FF;
 }
 
 /* CAREER SECTION */
 
 .career-journey{
-  background:#003566;
-  border-radius:8px;
-  padding:10px;
-  margin:30px auto;
-  max-width:1000px;
-  text-align:center;
-  color:white;
+background:#003566;
+border-radius:8px;
+padding:10px;
+margin:30px auto;
+max-width:1000px;
+text-align:center;
 }
 
 .career-journey h3{
-  font-size:32px;
-  font-weight:700;
-  margin:20px 0;
+font-size:32px;
+font-weight:700;
+margin:20px 0;
 }
 
 /* FOOTER */
 
 footer{
-  background:#002B55;
-  text-align:center;
-  padding:25px;
-  font-size:0.9em;
-  margin-top:40px;
+background:#002B55;
+text-align:center;
+padding:25px;
+font-size:0.9em;
+margin-top:40px;
 }
 
 /* MOBILE */
@@ -265,17 +290,17 @@ footer{
 
 .story-card{
 flex-direction:column;
-height:auto;
 }
 
 .story-img{
+position:relative;
 width:100%;
 height:200px;
 margin-top:15px;
 }
 
 .story-text{
-max-width:100%;
+width:100%;
 text-align:center;
 }
 
@@ -294,8 +319,6 @@ text-align:center;
 </div>
 
 </header>
-
-<div class="container">
 
 <div class="tab-container">
 <button class="tab-button active" data-tab="about">About</button>
@@ -339,19 +362,39 @@ Specialized in marketplace growth, inventory optimization, sales analytics, and 
 
 <div class="story-card">
 <img class="story-img" src="https://www.dropbox.com/scl/fi/hhsuyifsoe6wtix7pqgcx/Tech-supp-img.jpeg?rlkey=i1md0bqxw2vb1cp24f5xukf1n&raw=1">
+
 <div class="story-text">
+
 <h3>I began my career in 2016 as a Sales, Billing, and Technical Support Representative for Convergys PH</h3>
+
 <p>I handled U.S.-based accounts like Comcast and Spectrum providing billing, technical and customer support.</p>
+
+<p class="story-more">
+During this role I developed strong communication and troubleshooting skills assisting customers with internet connectivity, billing concerns and technical issues.
+</p>
+
+<button class="see-more">See more</button>
+
 </div>
 </div>
 
-<!-- CARD 2 REVERSED -->
+<!-- CARD 2 -->
 
 <div class="story-card reverse">
 <img class="story-img" src="https://www.dropbox.com/scl/fi/bp8yvgvmonb643n87af3a/inventory-img.jpeg?rlkey=m5ryhvfmduog47hs9253mrw60&raw=1">
+
 <div class="story-text">
+
 <h3>In 2018, I worked as an Inventory Controller at MUMUSO General Trading LLC</h3>
-<p>During the pandemic I was exposed to e-commerce operations including marketplace management, stock replenishment and research.</p>
+
+<p>During the pandemic I was exposed to e-commerce operations including marketplace management.</p>
+
+<p class="story-more">
+This role introduced me to inventory forecasting, supply chain operations and marketplace product management which eventually transitioned my career into e-commerce operations.
+</p>
+
+<button class="see-more">See more</button>
+
 </div>
 </div>
 
@@ -359,9 +402,19 @@ Specialized in marketplace growth, inventory optimization, sales analytics, and 
 
 <div class="story-card">
 <img class="story-img" src="https://www.dropbox.com/scl/fi/0ts55sxa8po7i93hiak4y/Ecom-img.jpeg?rlkey=vfg1kvhw7mfoe0scnh29yq7bj&raw=1">
+
 <div class="story-text">
+
 <h3>In 2022 I joined Geekay Distribution FZCO as an E-Commerce Marketplace Specialist</h3>
+
 <p>I now manage marketplace and quick-commerce operations across multiple GCC platforms.</p>
+
+<p class="story-more">
+I work across Amazon, Noon, Talabat, Instashop and other marketplaces focusing on analytics, stock optimization, product visibility and operational automation.
+</p>
+
+<button class="see-more">See more</button>
+
 </div>
 </div>
 
@@ -370,6 +423,45 @@ Specialized in marketplace growth, inventory optimization, sales analytics, and 
 <footer>
 © 2026 Errol Amparado
 </footer>
+
+<script>
+
+/* Tabs */
+
+const tabs=document.querySelectorAll('.tab-button[data-tab]');
+const contents=document.querySelectorAll('.tab-content');
+
+tabs.forEach(tab=>{
+tab.addEventListener('click',()=>{
+tabs.forEach(t=>t.classList.remove('active'));
+tab.classList.add('active');
+
+contents.forEach(c=>c.classList.remove('active'));
+document.getElementById(tab.dataset.tab).classList.add('active');
+});
+});
+
+/* See More */
+
+document.querySelectorAll(".see-more").forEach(button=>{
+
+button.addEventListener("click",function(){
+
+const text=this.previousElementSibling;
+
+if(text.style.display==="block"){
+text.style.display="none";
+this.textContent="See more";
+}else{
+text.style.display="block";
+this.textContent="See less";
+}
+
+});
+
+});
+
+</script>
 
 </body>
 </html>
